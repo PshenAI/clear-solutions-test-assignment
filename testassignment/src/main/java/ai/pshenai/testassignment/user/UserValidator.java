@@ -3,16 +3,19 @@ package ai.pshenai.testassignment.user;
 import ai.pshenai.testassignment.user.web.UserDTO;
 import org.apache.commons.validator.routines.EmailValidator;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
 
+@Component
 public class UserValidator {
 
     @Value("${user.min-age}")
-    private static int minAge;
-    private final static EmailValidator emailValidator = EmailValidator.getInstance();
+    private int minAge;
 
-    public static String validateUser(UserDTO userDTO) {
+    private final EmailValidator emailValidator = EmailValidator.getInstance();
+
+    public String validateUser(UserDTO userDTO) {
         String result = null;
         if(userDTO == null) {
             result =  "Request body cannot be null";
@@ -25,15 +28,15 @@ public class UserValidator {
         return result;
     }
 
-    public static boolean validateEmail(String email) {
+    public boolean validateEmail(String email) {
         return emailValidator.isValid(email);
     }
 
-    public static boolean validateFromAndToBirthDates(LocalDate from, LocalDate to) {
+    public boolean validateFromAndToBirthDates(LocalDate from, LocalDate to) {
         return from.isAfter(to);
     }
 
-    public static boolean validateUsersAge(LocalDate dateOfBirth) {
+    public boolean validateUsersAge(LocalDate dateOfBirth) {
         LocalDate today = LocalDate.now();
         LocalDate minAgeAgo = today.minusYears(minAge);
 
