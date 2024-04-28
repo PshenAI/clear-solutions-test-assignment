@@ -22,15 +22,6 @@ public class UserDTO {
     private UserAddressDTO address;
     private String phoneNumber;
 
-    public UserDTO(String email, UserAddressDTO address, LocalDate dateOfBirth, String lastName, String firstName, String phoneNumber) {
-        this.email = email;
-        this.address = address;
-        this.dateOfBirth = dateOfBirth;
-        this.lastName = lastName;
-        this.firstName = firstName;
-        this.phoneNumber = phoneNumber;
-    }
-
     public static UserDTO getMockUserDTO() {
         UserDTO userDTO = new UserDTO();
         userDTO.setEmail("mockmail@clearsolutions.com");

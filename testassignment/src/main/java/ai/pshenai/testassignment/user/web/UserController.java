@@ -16,6 +16,8 @@ import java.util.UUID;
 @RequestMapping("api/v1/users")
 public class UserController {
 
+    private final static String ILLEGAL_DATE_PARAMETERS_MESSAGE = "From date must be before To date";
+
     private final UserValidator userValidator;
     private final UserService userService;
 
@@ -62,7 +64,7 @@ public class UserController {
                 @RequestParam("from") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate fromDate,
                 @RequestParam("to") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate toDate) {
         if (userValidator.validateFromAndToBirthDates(fromDate, toDate)) {
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "From date must be before To date");
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, ILLEGAL_DATE_PARAMETERS_MESSAGE);
         }
 
         List<UserDTO> users = userService.searchUsersDateOfBirth(fromDate, toDate);

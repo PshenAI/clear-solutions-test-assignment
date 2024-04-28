@@ -15,7 +15,7 @@ public class GlobalExceptionHandler {
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ResponseBody
     public ResponseEntity<Object> handleValidationExceptions(ResponseStatusException ex) {
-        return ResponseEntity.badRequest().body(ex.getMessage());
+        return ResponseEntity.badRequest().body(ex.getReason());
     }
 
     @ExceptionHandler(Exception.class)
