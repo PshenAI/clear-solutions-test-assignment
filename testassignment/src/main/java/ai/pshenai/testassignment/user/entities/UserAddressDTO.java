@@ -1,4 +1,4 @@
-package ai.pshenai.testassignment.user.web;
+package ai.pshenai.testassignment.user.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,6 +1,6 @@
 package ai.pshenai.testassignment.user;
 
-import ai.pshenai.testassignment.user.web.UserDTO;
+import ai.pshenai.testassignment.user.entities.UserDTO;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;

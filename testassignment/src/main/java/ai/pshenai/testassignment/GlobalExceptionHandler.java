@@ -1,4 +1,4 @@
-package ai.pshenai.testassignment.user;
+package ai.pshenai.testassignment;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -1,5 +1,6 @@
 package ai.pshenai.testassignment.user.web;
 
+import ai.pshenai.testassignment.user.entities.UserDTO;
 import ai.pshenai.testassignment.user.UserService;
 import ai.pshenai.testassignment.user.UserValidator;
 import org.springframework.format.annotation.DateTimeFormat;

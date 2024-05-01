@@ -1,6 +1,6 @@
 package ai.pshenai.testassignment.user;
 
-import ai.pshenai.testassignment.user.web.UserDTO;
+import ai.pshenai.testassignment.user.entities.UserDTO;
 import org.apache.commons.validator.routines.EmailValidator;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;

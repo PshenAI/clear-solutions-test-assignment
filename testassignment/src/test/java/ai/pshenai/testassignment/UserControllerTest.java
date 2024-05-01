@@ -3,7 +3,7 @@ package ai.pshenai.testassignment;
 import ai.pshenai.testassignment.user.UserService;
 import ai.pshenai.testassignment.user.UserValidator;
 import ai.pshenai.testassignment.user.web.UserController;
-import ai.pshenai.testassignment.user.web.UserDTO;
+import ai.pshenai.testassignment.user.entities.UserDTO;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
